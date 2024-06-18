@@ -1,11 +1,24 @@
-import { Box, Center, Heading } from "@chakra-ui/react";
-import React from "react";
+import { Box, Center, Flex, Heading } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { getProducts } from "../../data/asyncMock";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({ title }) => {
+  const [ products, setProducts ] = useState([])
+
+  useEffect(() => {
+
+    getProducts()
+      .then((prod) => setProducts(prod))
+      .catch((error) => console.log(error))
+
+  }, [])
+
   return (
-    <Center>
+    <Flex direction={"column"} justify={"center"} align={"center"}>
       <Heading>{title}</Heading>
-    </Center>
+      <ItemList products={products} />
+    </Flex>
   );
 };
 

@@ -3,7 +3,7 @@ import "./LogoComeCabron.css"
 
 const LogoComeCabron = () => {
   return (
-    <img src=" ../../../src/assets/imgs/logoComeCabron.png" alt="Logo ComeCabron"/>
+    <img class="logo" src=" ../../../src/assets/imgs/logoComeCabron.png" alt="Logo ComeCabron"/>
   )
 }
 
