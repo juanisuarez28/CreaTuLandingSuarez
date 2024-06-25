@@ -2,11 +2,13 @@ import { Box, Flex } from '@chakra-ui/react'
 import Item from '../Item/Item'
 import React from 'react'
 
-const ItemList = ({ products }) => {
+const ItemList = ({ products , category}) => {
+    const filteredProducts= category ? products.filter(prod => prod.id == category) : products;
+
     return (
     <Flex wrap={'wrap'} justify={'center'} align={'center'}>
         {
-            products.map((prod) => (
+            filteredProducts.map((prod) => (
                 <Box key={prod.id}>
                     <Item {...prod} />
                 </Box>    

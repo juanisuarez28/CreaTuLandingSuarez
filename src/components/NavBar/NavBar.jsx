@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   Menu,
   MenuButton,
@@ -20,7 +21,11 @@ import LogoComeCabron from "../LogoComeCabron/LogoComeCabron";
 const NavBar = () => {
   return (
     <Flex justify={"space-between"} w={"100%"} align={"center"} height={"4rem"}>
-      <Heading> <LogoComeCabron /> </Heading>
+      <Heading>
+        <Link to="/">
+          <LogoComeCabron />
+        </Link>
+      </Heading>
       <Menu>
         <MenuButton as={Button} rightIcon={<FaChevronDown />}>
           Menu
