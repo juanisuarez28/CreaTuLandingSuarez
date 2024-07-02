@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Button, ButtonGroup, Image, Text, Divider } from "@chakra-ui/react";
+import ItemCount from "../ItemCount/ItemCount";
 
-const Item = ({ nombre,precio, img }) => {
+const Item = ({ nombre, id, precio, img, stock }) => {
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" margin={'1.5rem'}>
       <CardBody>
         <Image
           src={img}
@@ -24,7 +26,7 @@ const Item = ({ nombre,precio, img }) => {
       <CardFooter>
         <ButtonGroup spacing="2">
           <Button variant="ghost" colorScheme="blue">
-            Ver detalle
+            <Link to={`/producto/${id}`}>Ver detalle</Link>
           </Button>
         </ButtonGroup>
       </CardFooter>

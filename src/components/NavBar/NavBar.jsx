@@ -28,14 +28,14 @@ const NavBar = () => {
       </Heading>
       <Menu>
         <MenuButton as={Button} rightIcon={<FaChevronDown />}>
-          Menu
+          Productos
         </MenuButton>
         <MenuList>
-          <MenuItem>Download</MenuItem>
-          <MenuItem>Create a Copy</MenuItem>
-          <MenuItem>Mark as Draft</MenuItem>
-          <MenuItem>Delete</MenuItem>
-          <MenuItem>Attend a Workshop</MenuItem>
+          <MenuItem><Link to='/categorias/pizzas'>Pizzas</Link></MenuItem>
+          <MenuItem><Link to='/categorias/milapizzas'>Milapizzas</Link></MenuItem>
+          <MenuItem><Link to='/categorias/horno-de-barro'>Horno de barro</Link></MenuItem>
+          <MenuItem><Link to='/categorias/hamburguesas'>Hamburguesas</Link></MenuItem>
+          <MenuItem><Link to='/categorias/postres'>Postres</Link></MenuItem>
         </MenuList>
       </Menu>
       <CartWidget />
