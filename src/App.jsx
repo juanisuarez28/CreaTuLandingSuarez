@@ -8,6 +8,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import PageNotFound from "./components/PageNotFound/PageNotFound";
+import {CartContextProvider} from './context/CartContext'
+import Cart from "./components/Cart/Cart";
 
 
 function App() {
@@ -17,20 +19,21 @@ function App() {
 
   return (
     <ChakraProvider>
-      <BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <NavBar />
 
-        <NavBar />
-
-        <Routes>
-          <Route path="/" element={<ItemListContainer title="Comé Cabron Tienda" />} />
-          <Route path="/categorias/:category" element={ <ItemListContainer title="Comé Cabron Tienda" />} />
-          <Route path="/producto/:productId" element={ <ItemDetailContainer />} />
-          <Route path="/item" element={<ItemDetail />}/>
-          <Route path="*" element={ <PageNotFound /> } />
-        </Routes>
-        
-
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ItemListContainer title="Comé Cabron Tienda" />} />
+            <Route path="/categorias/:category" element={ <ItemListContainer title="Comé Cabron Tienda" />} />
+            <Route path="/producto/:productId" element={ <ItemDetailContainer />} />
+            <Route path="/item" element={<ItemDetail />}/>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={ <PageNotFound /> } />
+          </Routes>
+          
+        </BrowserRouter>
+      </CartContextProvider>
     </ChakraProvider>
   );
 }

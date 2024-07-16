@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Button, ButtonGroup, Image, Text, Divider } from "@chakra-ui/react";
 import ItemCount from "../ItemCount/ItemCount";
 import { ToastContainer, toast } from 'react-toastify';
+import Context from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({nombre, descripcion, precio, id, img, stock}) => {
 
+  const [cantidad, setCantidad]= useState(0)
+  const { addItem } = useContext(Context) //me traigo la funcion addItem de CartContext 
+
   const onAdd = (quantity)=>{
+    const item = {
+      id, nombre, precio, img
+    }
+    setCantidad(quantity)
+    addItem(item, quantity)
     toast(`Agregaste ${quantity} ${nombre} al carrito`)
   }
 
@@ -34,7 +44,17 @@ const ItemDetail = ({nombre, descripcion, precio, id, img, stock}) => {
     <Divider />
     <CardFooter>
       <ButtonGroup spacing="2">
-        <ItemCount initialValue={1} stock={stock} onAdd={onAdd}/>
+        {
+          cantidad === 0 ?
+          <ItemCount initialValue={1} stock={stock} onAdd={onAdd}/>
+          :
+          <Link to='/cart'>
+            <Button variant='solid'>
+              Ver carrito
+            </Button>
+          </Link>
+
+        }
       </ButtonGroup>
     </CardFooter>
     <ToastContainer />
