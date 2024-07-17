@@ -31,27 +31,27 @@ const NavBar = () => {
             Ver todo
           </Button>
         </Link>
-        <Link to='/categorias/pizzas'>
+        <Link to='/categorias/remeras'>
           <Button color='#000000' variant='ghost'>
             Remeras
           </Button>
         </Link>
-        <Link to='/categorias/horno-de-barro'>
+        <Link to='/categorias/pantalones'>
           <Button color='#000000' variant='ghost'>
             Pantalones
           </Button>
         </Link>
-        <Link to='/categorias/hamburguesas'>
+        <Link to='/categorias/hoodies'>
           <Button color='#000000' variant='ghost'>
-            Buzos
+            Hoodies
           </Button>
         </Link>
-        <Link to='/categorias/pizzas'>
+        <Link to='/categorias/bermudas'>
           <Button color='#000000' variant='ghost'>
             Bermudas
           </Button>
         </Link>
-        <Link to='/categorias/pizzas'>
+        <Link to='/categorias/zapatillas'>
           <Button color='#000000' variant='ghost'>
             Zapatillas
           </Button>

@@ -4,6 +4,7 @@ import { getProductosById } from '../../data/asyncMock';
 import { Box, Flex } from '@chakra-ui/react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { PulseLoader } from 'react-spinners';
+import { db } from '../../config/Firebase';
 
 const ItemDetailContainer = () => {
     const [product, setProduct]= useState([]);
@@ -12,7 +13,7 @@ const ItemDetailContainer = () => {
 
     const [loading, setLoading]= useState(true); //seteamos el estado del spinner en true, ya que queremos que sea lo primero que se muestre
 
-
+    console.log(db)
     useEffect(()=>{
         setLoading(true)
 
