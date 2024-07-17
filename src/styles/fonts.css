@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('../assets/fonts/LeagueSpartan.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .hero-text {
+    font-family: 'LeagueSpartan', sans-serif;
+  }

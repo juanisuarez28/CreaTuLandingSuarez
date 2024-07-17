@@ -4,8 +4,9 @@ import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import {PulseLoader} from 'react-spinners';
+import Hero from "../Hero/Hero";
 
-const ItemListContainer = ({ title }) => {
+const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
   const { category } = useParams();
@@ -24,8 +25,8 @@ const ItemListContainer = ({ title }) => {
   }, [category]); //aca van los datos que queremos que al cambiar actualicen la renderizacion
 
   return (
-    <Flex direction={"column"} justify={"center"} align={"center"}>
-      <Heading>{title}</Heading>
+    <Flex direction={"column"} justify={"center"} align={"center"} pt={'110px'}>
+  
     {
       loading ?                               //if loading ==true
       <Flex justify={'center'} align={'center'} h={'50vh'}>                                       

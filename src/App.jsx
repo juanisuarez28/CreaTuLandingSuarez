@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import {CartContextProvider} from './context/CartContext'
 import Cart from "./components/Cart/Cart";
+import Home from "./components/Home/Home";
 
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
           <NavBar />
 
           <Routes>
-            <Route path="/" element={<ItemListContainer title="Comé Cabron Tienda" />} />
-            <Route path="/categorias/:category" element={ <ItemListContainer title="Comé Cabron Tienda" />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/productos" element={ <ItemListContainer />} />
+            <Route path="/categorias/:category" element={ <ItemListContainer />} />
             <Route path="/producto/:productId" element={ <ItemDetailContainer />} />
             <Route path="/item" element={<ItemDetail />}/>
             <Route path="/cart" element={<Cart />} />

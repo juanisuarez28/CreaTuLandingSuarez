@@ -13,7 +13,7 @@ const Cart = () => {
 
     if(getQuantity()===0){
         return(
-            <Flex mt={'3%'} justify={'center'} align={'center'} flexDirection={'column'}>
+            <Flex pt={'150px'} justify={'center'} align={'center'} flexDirection={'column'}>
                 <Text fontSize={'40px'} fontWeight={'700'}>EL CARRITO ESTÁ VACÍO</Text>
                 <Text mt={'30px'}>Una vez que añadas algo a tu carrito, aparecerá acá. ¿Listo para empezar?</Text>
                 <Link to='/'>
@@ -25,7 +25,7 @@ const Cart = () => {
         )
     }else{
         return (
-          <Flex mt={'3%'} justify={'center'}>
+          <Flex pt={'150px'} justify={'center'}>
       
               <Flex pl={'30px'} align={'flex-start'} width={'40%'} flexDirection={'column'}>
                   <Text  fontSize={'40px'} fontWeight={'700'}>TU CARRITO</Text>
