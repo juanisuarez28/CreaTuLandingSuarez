@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getProductosById } from '../../data/asyncMock';
 import { Box, Flex } from '@chakra-ui/react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { PulseLoader } from 'react-spinners';

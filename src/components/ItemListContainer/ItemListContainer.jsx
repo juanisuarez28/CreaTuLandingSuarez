@@ -1,6 +1,5 @@
 import { Box, Center, Flex, Heading } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import {PulseLoader} from 'react-spinners';
