@@ -5,6 +5,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { PulseLoader } from 'react-spinners';
 import { db } from '../../config/Firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [product, setProduct]= useState([]);
@@ -16,12 +17,20 @@ const ItemDetailContainer = () => {
     console.log(db)
     useEffect(()=>{
         setLoading(true)
+        const getData= async ()=>{
+            const queryRef= doc(db, 'productos', productId) //creo la query con el id del producto  
+            const response = await getDoc(queryRef) //obtengo el doc de firebase
 
-        getProductosById(productId)
-            .then((data)=> setProduct(data))
-            .catch((error)=> console.log(error))
-            .finally(()=> setLoading(false))  //cuando se renderizen los productos desaparece el spinner
+            const newItem= {    //convierto en objeto
+                ...response.data(),
+                id: response.id
+            }
 
+            setProduct(newItem)
+            setLoading(false)
+        }
+
+        getData()
     }, [])
 
     return (

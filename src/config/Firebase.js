@@ -14,3 +14,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
+//products.forEach((prod)=>{
+  //addDoc(collection(db, "productos"), prod)
+    //.then((data)=>
+      //console.log(`el producto ${data.id} fue cargado correctamente`)
+    //)
+    //.catch((error)=> console.log(error))
+//})
