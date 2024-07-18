@@ -5,3 +5,9 @@
     border-bottom: 0.2px solid rgb(217, 217, 217);
 
 }
+
+@media (max-width: 1024px) {
+    .navbar .menugrande{
+        display: none;
+    }
+  }

@@ -1,64 +1,63 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Heading,
   Button,
   Flex,
 } from "@chakra-ui/react";
 import "./NavBar.css";
-import LogoComeCabron from "../LogoComeCabron/LogoHaven";
+import LogoHaven from "../LogoHaven/LogoHaven";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const NavBar = () => {
   return (
     <Flex className="navbar" direction={'column'} w={'100%'}>
       <Flex className="logobar" pl={'12%'} pr={'13%'} justify={"space-between"} w={"100%"} align={"center"} height={"4rem"}>
-        <LogoComeCabron />
-        <CartWidget />
+        <LogoHaven />
+        <Flex align={"center"}>
+          <CartWidget />
+          <div className="lg:hidden">
+            <HamburgerMenu />
+          </div>
+        </Flex>
       </Flex>
-      <Flex pl={'30%'} pr={'30%'} justify={'space-between'} w={'100%'} align={'center'} height={'3rem'}>
-      <Link to='/productos'>
-          <Button color='#000000' variant='ghost'>
-            Ver todo
+      <Flex pl={'30%'} pr={'30%'} justify={'space-between'} w={'100%'} align={'center'} height={'3rem'} className="menugrande">
+        <Link to='/productos'>
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            ver todo.
           </Button>
         </Link>
         <Link to='/categorias/remeras'>
-          <Button color='#000000' variant='ghost'>
-            Remeras
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            remeras.
           </Button>
         </Link>
         <Link to='/categorias/pantalones'>
-          <Button color='#000000' variant='ghost'>
-            Pantalones
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            pantalones.
           </Button>
         </Link>
         <Link to='/categorias/hoodies'>
-          <Button color='#000000' variant='ghost'>
-            Hoodies
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            hoodies.
           </Button>
         </Link>
         <Link to='/categorias/bermudas'>
-          <Button color='#000000' variant='ghost'>
-            Bermudas
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            bermudas.
           </Button>
         </Link>
         <Link to='/categorias/zapatillas'>
-          <Button color='#000000' variant='ghost'>
-            Zapatillas
+          <Button fontSize={'15px'} color='#000000' variant='ghost'>
+            zapatillas.
           </Button>
         </Link>
       </Flex>
     </Flex>
-
   );
 };
 

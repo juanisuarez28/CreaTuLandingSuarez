@@ -5,12 +5,12 @@ import React from 'react'
 const ItemList = ({ products }) => {
 
     return (
-    <Flex wrap={'wrap'} justify={'center'} align={'center'}>
+    <Flex w={'80%'} wrap={'wrap'} justify={'center'} align={'center'} pt={'3%'}>
         {
             products.map((prod) => (
-                <Box key={prod.id}>
+                <Box m={'2%'} mb={'4%'} key={prod.id}> 
                     <Item {...prod} />
-                </Box>    
+                </Box>
             ))
         }
     </Flex>

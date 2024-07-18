@@ -8,7 +8,7 @@ const CartWidget = () => {
   const { getQuantity }= useContext(Context)  //traigo contexto
 
   return (
-    <Flex mt={'20px'} mr={6} justify={'space-between'}>
+    <Flex mt={'20px'} mr={4} justify={'space-between'}>
       <Link to='/cart'>
       <IoBagOutline color={'black'} fontSize={20} />
       </Link>

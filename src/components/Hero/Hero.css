@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 113px;
 }
 
 .fondo {
@@ -38,4 +39,10 @@
 .button-shop{
     top: 32%;
     z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .container{
+      margin-top: 65px;
+  }
 }
