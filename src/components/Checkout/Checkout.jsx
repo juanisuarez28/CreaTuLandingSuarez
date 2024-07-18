@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import { Box } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { CheckIcon } from '@heroicons/react/20/solid'
 
 const Checkout = () => {
-    const [user, setUser] = useState({
-        name: '',
-        email: '',
-        repeatedEmail: '',
-        phone: ''
-    })
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    repeatedEmail: "",
+    phone: "",
+  });
 
   return (
-    <div>Checkout</div>
-  )
-}
+    <Box pt={"180px"}>
 
-export default Checkout
+    </Box>
+  );
+};
+
+export default Checkout;
