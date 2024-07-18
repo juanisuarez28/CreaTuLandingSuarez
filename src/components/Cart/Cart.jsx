@@ -75,7 +75,7 @@ const Cart = () => {
                       <Text fontWeight={'600'}>${getTotalPrice()}</Text>
                   </Box>
                   <Button mt={'10px'} rightIcon={<FaArrowRight />} color={'white'} backgroundColor={'#727078'} variant='solid'>
-                      IR A PAGAR
+                      <Link to='/checkout'>IR A PAGAR</Link> 
                   </Button>
               </Flex>    
           </Flex>
