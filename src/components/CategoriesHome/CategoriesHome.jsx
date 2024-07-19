@@ -6,7 +6,7 @@ const CategoriesHome = () => {
     const callouts = [
         {
           name: 'remeras',
-          description: 'comodidad y tendencia.',
+          description: 'comodidad y estilo.',
           imageSrc: 'https://images.urbndata.com/is/image/UrbanOutfitters/93140697_030_b?$xlarge$&fit=constrain&fmt=webp&qlt=80&wid=960',
           imageAlt: 'remeras category',
           href: '/categorias/remeras',

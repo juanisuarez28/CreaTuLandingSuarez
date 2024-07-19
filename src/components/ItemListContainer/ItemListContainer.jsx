@@ -40,7 +40,7 @@ const ItemListContainer = () => {
   }, [categoryId]); //aca van los datos que queremos que al cambiar actualicen la renderizacion
 
   return (
-    <Flex direction={"column"} justify={"center"} align={"center"} pt={'110px'}>
+    <Flex direction={"column"} justify={"center"} align={"center"} pt={'10%'}>
   
     {
       loading ?                               //if loading ==true

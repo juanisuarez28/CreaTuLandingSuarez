@@ -14,10 +14,10 @@ const Cart = () => {
     if(getQuantity()===0){
         return(
             <Flex pt={'150px'} justify={'center'} align={'center'} flexDirection={'column'}>
-                <Text fontSize={'40px'} fontWeight={'700'}>EL CARRITO ESTÁ VACÍO</Text>
-                <Text mt={'30px'}>Una vez que añadas algo a tu carrito, aparecerá acá. ¿Listo para empezar?</Text>
+                <Text fontSize={'40px'} fontWeight={'700'}>el carrito está vacío.</Text>
+                <Text mt={'30px'}>una vez que añadas algo a tu carrito, aparecerá acá. ¿listo para empezar?</Text>
                 <Link to='/'>
-                    <Button mt={'20px'} rightIcon={<FaArrowRight />} color={'white'} backgroundColor={'#727078'} variant='solid'>
+                    <Button mt={'20px'} rightIcon={<FaArrowRight />} color={'white'} backgroundColor={'#72BB92'} variant='solid'>
                       EMPEZAR
                   </Button>
                 </Link>

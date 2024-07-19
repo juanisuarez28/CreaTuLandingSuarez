@@ -8,14 +8,19 @@ import {
   MenuItem,
   Button,
   Flex,
+  Box,
 } from "@chakra-ui/react";
 import "./NavBar.css";
 import LogoHaven from "../LogoHaven/LogoHaven";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import Banner from "../Banner/Banner";
 
 const NavBar = () => {
   return (
+    <Box>
+      
     <Flex className="navbar" direction={'column'} w={'100%'}>
+    <Banner/>
       <Flex className="logobar" pl={'12%'} pr={'13%'} justify={"space-between"} w={"100%"} align={"center"} height={"4rem"}>
         <LogoHaven />
         <Flex align={"center"}>
@@ -58,6 +63,7 @@ const NavBar = () => {
         </Link>
       </Flex>
     </Flex>
+    </Box>
   );
 };
 
