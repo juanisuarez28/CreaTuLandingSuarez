@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     return (
-    <Box align={'center'} justify={'center'} pt={'7rem'} > 
+    <Box align={'center'} justify={'center'} pt={'12rem'} > 
         {
             loading ?
             <Flex justify={'center'} align={'center'} h={'50vh'}>                                       

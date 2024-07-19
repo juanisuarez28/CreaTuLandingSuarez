@@ -13,7 +13,7 @@ const Cart = () => {
 
     if(getQuantity()===0){
         return(
-            <Flex pt={'150px'} justify={'center'} align={'center'} flexDirection={'column'}>
+            <Flex p={'2rem'} pt={'20rem'} justify={'center'} align={'center'} flexDirection={'column'}>
                 <Text fontSize={'40px'} fontWeight={'700'}>el carrito está vacío.</Text>
                 <Text mt={'30px'}>una vez que añadas algo a tu carrito, aparecerá acá. ¿listo para empezar?</Text>
                 <Link to='/'>
@@ -25,15 +25,15 @@ const Cart = () => {
         )
     }else{
         return (
-          <Flex pt={'150px'} justify={'center'}>
+          <Flex className='carrito' justify={'center'}>
       
-              <Flex pl={'30px'} align={'flex-start'} width={'40%'} flexDirection={'column'}>
-                  <Text  fontSize={'40px'} fontWeight={'700'}>TU CARRITO</Text>
-                  <Text mt={'20px'} fontSize={'18px'}>Total ({getQuantity()} productos) <span fontWeight={'500'}>${getTotalPrice()}</span></Text>
-                  <Text mt={'15px'} w={'70%'}>Los artículos en tu carrito no están reservados. Terminá el proceso de compra ahora para hacerte con ellos.</Text>
+              <Flex className='detalle' pl={'30px'} align={'flex-start'} flexDirection={'column'}>
+                  <Text  fontSize={'40px'} fontWeight={'700'}>tu carrito.</Text>
+                  <Text mt={'20px'} fontSize={'18px'}>total ({getQuantity()} productos) <span fontWeight={'500'}>${getTotalPrice()}</span></Text>
+                  <Text mt={'15px'} w={'70%'}>los artículos en tu carrito no están reservados. terminá el proceso de compra ahora para hacerte con ellos.</Text>
                   {
                       cart.map((prod)=>(
-                          <Flex key={prod.id} justifyContent={'space-between'} border={'1px solid black'} width={'70%'} mt={'30px'}>
+                          <Flex className='img-precio' key={prod.id} justifyContent={'space-between'} pb={'1rem'} borderBottom={'0.2px solid rgb(217, 217, 217)'} width={'70%'} mt={'30px'}>
                               <Flex>
                                   <Img 
                                       src={prod.img}         
@@ -43,7 +43,7 @@ const Cart = () => {
                                       />
                                   <Flex ml={'15px'} justify={'flex-start'} flexDirection={'column'}>
                                       <Text fontWeight={'500'} fontSize={'18px'} mt={'15px'} mb={'5px'} >{prod.nombre}</Text>
-                                      <Text fontSize={'16px'} >Cantidad: {prod.quantity}</Text>
+                                      <Text fontSize={'16px'} >cantidad: {prod.quantity}</Text>
                                   </Flex>
                               </Flex>
                               <Flex>
@@ -60,7 +60,7 @@ const Cart = () => {
                   </Button>
               </Flex>
       
-              <Flex flexDirection={'column'}>
+              <Flex  className='resumen' p={'1rem'} border={'0.2px solid rgb(217, 217, 217)'} flexDirection={'column'}>
                   <Text fontSize={'23px'} fontWeight={'600'}>Resumen del pedido</Text>
                   <Box display={'flex'} mt={'20px'} justifyContent={'space-between'}>
                       <Text>{getQuantity()} productos</Text>
@@ -70,7 +70,7 @@ const Cart = () => {
                       <Text>Entrega</Text>
                       <Text>Gratis</Text>
                   </Box>
-                  <Box display={'flex'} mt={'20px'} justifyContent={'space-between'}>
+                  <Box borderTop={'0.2px solid rgb(217, 217, 217)'} pt={'1rem'} display={'flex'} mt={'20px'} justifyContent={'space-between'}>
                       <Text fontWeight={'600'}>Total</Text>
                       <Text fontWeight={'600'}>${getTotalPrice()}</Text>
                   </Box>
