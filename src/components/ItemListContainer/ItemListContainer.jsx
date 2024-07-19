@@ -48,7 +48,7 @@ const ItemListContainer = () => {
           <PulseLoader color="grey" />            
       </Flex>                                 //renderiza spinner
       :                                       //else
-      <ItemList products={products} />        //renderiza productos
+      <ItemList category={categoryId} products={products} />        //renderiza productos
     }
 
     </Flex>

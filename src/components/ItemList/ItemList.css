@@ -1,0 +1,12 @@
+.itemlist{
+    padding-top: 2%;
+}
+
+@media (max-width: 1024px) {
+    .itemlist{
+        padding-top: 0%;
+    }
+    .card{
+        margin-bottom: 15%;
+    }
+}
