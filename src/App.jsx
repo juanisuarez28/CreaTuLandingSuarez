@@ -11,6 +11,7 @@ import {CartContextProvider} from './context/CartContext'
 import Cart from "./components/Cart/Cart";
 import Home from "./components/Home/Home";
 import Checkout from "./components/Checkout/Checkout";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
             <Route path="/checkout" element={<Checkout/>}/>
             <Route path="*" element={ <PageNotFound /> } />
           </Routes>
+
+          <Footer/>
           
         </BrowserRouter>
       </CartContextProvider>
