@@ -7,10 +7,10 @@ const ItemCount = ({initialValue, stock, onAdd}) => {
 
   return (
     <Flex mt={'1.5rem'} align={'center'}>
-      <Box mr={'2rem'}>
-        <Button mr={'0.5rem'} size={'sm'} onClick={incrementar}>+</Button>
+      <Box w={'50%'} >
+        <Button mr={'0.5rem'} size={'xs'} onClick={incrementar}>+</Button>
         <span>{count}</span>
-        <Button ml={'0.5rem'} size={'sm'} onClick={decrementar}>-</Button>
+        <Button ml={'0.5rem'}  size={'xs'} onClick={decrementar}>-</Button>
       </Box>
         <Button color={'white'} backgroundColor={'#72BB92'} onClick={()=> onAdd(count)}>Agregar al carrito</Button>
     </Flex>
