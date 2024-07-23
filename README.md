@@ -1,8 +1,34 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# E-commerce "haven."
 
-Currently, two official plugins are available:
+Un e-commerce ficticio de ropa, donde apliqué todo lo aprendido en el curso de ReactJs en CoderHouse. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En el diseño se buscó realizar una página con estilos llamativos pero minimalistas. Manteniendo cierta línea similar de diseño a lo largo del recorrido por la misma.
+
+
+## Funcionalidades
+
+- Visualizar listado de productos, con posibilidad de ver por categoría.
+- Visualizar detalle de productos.
+- Agregar productos a carrito.
+- Ver detalle de carrito.
+- Finalizar compra.
+
+
+
+## Demo
+
+https://havenn.vercel.app/
+
+
+## Tech Stack
+
+**Client:** React, Chakra, TailwindCSS
+
+**Server:** Firebase
+
+
+## Authors
+
+- [@juanisuarez28](https://github.com/juanisuarez28)
+

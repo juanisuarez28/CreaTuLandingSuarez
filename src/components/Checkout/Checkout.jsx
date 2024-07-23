@@ -66,7 +66,8 @@ const Checkout = () => {
       let timerInterval;
       Swal.fire({
         title: "Muchas gracias por tu compra! ",
-        html: "Redireccionando al inicio...",
+        html: `ID de compra: ${orderRef.id}. 
+        Redireccionando a inicio...`,
         icon:"success",
         timer: 3500,
         timerProgressBar: true,

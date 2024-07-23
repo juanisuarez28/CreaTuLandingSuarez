@@ -6,6 +6,7 @@ import Context from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { StarIcon } from '@heroicons/react/20/solid'
 import { Radio, RadioGroup } from '@headlessui/react'
+import Swal from 'sweetalert2'
 import './ItemDetail.css'
 
 const product = {
@@ -44,7 +45,14 @@ const ItemDetail = ({nombre, descripcion, precio, id, img, stock}) => {
     }
     setCantidad(quantity)
     addItem(item, quantity)
-    toast(`Agregaste ${quantity} ${nombre} al carrito`)
+
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Agregaste ${quantity} ${nombre} al carrito`,
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   return (
